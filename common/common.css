@@ -3,6 +3,9 @@ a { display: block; cursor: pointer; }
 /* div, a{border:1px solid #f00;} */
 
 /* s : header */
+.navb-wrap{border-bottom:1px solid #ddd;}
+.navb-btn, .navbar-toggler.navb-btn:focus{border:none; box-shadow: none;}
+
 .navb-ul{}
 /* .navb-ul .nav-item{position: relative;} */
 .nav-link{height:80px; line-height:64px;text-align: left;
@@ -40,26 +43,28 @@ background-size: 25px;}
 
  @media (max-width: 992px) {
 /* 모바일에서는 아코디언 방식으로 동작 */
+.navb-bx{width: 100% !important;}
 .navbar-nav .nav-item{border-bottom:1px solid #eee;}
 
-/* s : footer */
-.f-head{display: flex; flex-wrap:flex; justify-content: space-between;}
-.f-head .select-bx{width:inherit;}
-/* e : footer */
+
 }
 
 
 @media (min-width: 992px) {
 
 /* PC에서는 hover 시 서브 메뉴가 나타나도록 설정 */
+.navb-wrap{padding: 0;}
+
 .navb-ul { width: 70%; justify-content: space-evenly; margin: 0 auto; }
 .nav-btn-more { display: none; }
 
 .nav-item:hover > .sub-mn-bx { display: block; }
-.sub-mn-bx{position: absolute; width: 100%;top: 80px;left: 0; background:#ddd;}
+
+.sub-mn-bx{padding:20px 0; position: absolute; width: 100%;top: 81px;left: 0; background:#fff; border-bottom:1px solid #ddd;}
 .sub-mn-bx .sub-mn-ul{display:flex; justify-content: center;}
 
 /* s : footer */
-
+.f-head{display: flex; flex-wrap:flex; justify-content: space-between;}
+.f-head .select-bx{width:inherit;}
 /* e : footer */
 }
