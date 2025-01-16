@@ -1,0 +1,58 @@
+.body {
+  font-family: 'SUIT', 'Apple SD Gothic Neo', Helvetica, '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, sans-serif;;
+}
+/* 헤더 백그라운드 이미지 설정 */
+.intro-header-area {
+  height: 100vh;
+  background-image:
+    linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+    url(./intro-img/intro-header-area01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.intro-nav a {
+  color: #fff;
+}
+.intro-nav:hover {
+  background-color: #fff;
+}
+.intro-nav:hover a {
+  color: #000;
+}
+.intro-header-inner-1 {
+  font-size: clamp(40px, 8.667vw, 60px);
+  color: #fff;
+  font-weight: 900;
+  margin-top: 40vh;
+  letter-spacing: -1.5px;
+}
+.intro-header-inner-2 {
+  font-size: clamp(30px, 15.667vw, 380px);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -20px;
+  line-height: 0.7;
+  position: absolute;
+  bottom: 6px;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+@media (max-width:1023px) {
+  .intro-header-inner-2 {
+    bottom: 3px;
+    letter-spacing: -17px;
+  }
+}
+@media (max-width:479px) {
+  .intro-header-inner-1 {
+    font-size: clamp(14px, 5.667vw, 18px);
+    letter-spacing: -1px;
+    margin-top: 30vh;
+  }
+  .intro-header-inner-2 {
+    bottom: 100px;
+    letter-spacing: -7px;
+  }
+}
