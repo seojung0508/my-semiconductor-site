@@ -47,8 +47,8 @@ background-size: 25px;}
 .sub-mn-ul li{padding:20px;}
 .sub-mn-ul li a{color:#333; text-decoration: none;}
 
-.nav-item:hover .nav-link{
-    color:#076E50 }
+.nav-item:hover .nav-link{color:#076E50 }
+    .sub-mn-ul li:hover a{color:#076E50 }
 /* e : header */
 
 /* s : footer */

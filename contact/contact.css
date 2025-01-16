@@ -39,6 +39,20 @@
 .ct-btn-bx .ct-btn{border: 1px solid #333;border-radius: 2px;padding: 10px 30px;font-size: 14px;background: #fff;font-weight: bold;}
 .ct-btn-bx .ct-btn:hover{background:#002060; color:#fff; border-color:#002060;}
 
+/* privacy */
+.pr-h4{font-size:35px; font-weight: bold;}
+
+.pr-txt-bx{ margin-top:30px;}
+.pr-txt-bx p{font-size: 17px; margin-top:4px; margin-bottom: 0;}
+.pr-txt-bx .pr-tit{font-size: 20px; font-weight: bold; margin-bottom:20px;}
+
+.pr-txt{margin-top: 20px;}
+.pr-txt p{padding-left:25px; position: relative;}
+.pr-txt .bullet{position: absolute; top:0; left:0;}
+.pr-txt .pr-sli{margin-left:20px;}
+.pr-txt .pr-sli .spot{position: relative;}
+.pr-txt .pr-sli .spot:after {content: "";clear: both;display: block;width: 5px;height: 5px;background: #333;border-radius: 20px;position: absolute;top: 9px;left: -14px;}
+
 @media (min-width:576px){
     .ct-fd2 .ct-field{width:inherit; margin-right:20px;}
 }
