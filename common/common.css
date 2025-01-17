@@ -28,7 +28,10 @@ a {
     box-shadow: none;
 }
 
+
+/*
 .navb-ul {}
+*/
 
 
 /* .navb-ul .nav-item{position: relative;} */
@@ -90,11 +93,14 @@ a {
 
 /* s : footer */
 
+
+/*
 .f-area {}
 
 .f-inner {}
 
 .f-bx {}
+*/
 
 .f-head {
     display: flex;
@@ -111,9 +117,12 @@ a {
     width: 100%;
 }
 
+
+/*
 .select-bx {}
 
 .f-info-bx {}
+*/
 
 .f-info {
     display: flex;

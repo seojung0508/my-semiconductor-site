@@ -1,1 +1,20 @@
-@charset "utf-8";
+        @charset "utf-8";
+        .custom-image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .text-container h1 {
+            font-weight: bold;
+        }
+        
+        .custom-image {
+            border-radius: 30px;
+        }
