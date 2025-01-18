@@ -1,3 +1,97 @@
+/* 기본 스타일 (데스크탑 및 태블릿) */
+.bdcircle-ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    overflow: hidden;
+    min-width: 1000px; /* 최소 너비를 설정하여 화면 축소 방지 */
+}
+
+.bdcircle-bx {
+    width: 250px; /* 기본 크기 */
+    height: 250px; /* 기본 크기 */
+    background: #eee;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.bdcircle-ul li {
+    flex: 0 0 auto; /* 고정된 크기를 갖지 않도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 각 원에 대한 배경 이미지 설정 */
+.bdcircle-ul li:nth-child(1) {
+    background-image: url(/company/img/bdcircle01.png);
+}
+.bdcircle-ul li:nth-child(2) {
+    margin-top: 400px;
+    background-image: url(/company/img/bdcircle02.png);
+}
+.bdcircle-ul li:nth-child(3) {
+    background-image: linear-gradient(#00091b, #002060);
+}
+.bdcircle-ul li:nth-child(4) img {
+    width: 71%;
+    position: relative;
+    top: 43%;
+    left: 15%;
+}
+.bdcircle-ul li:nth-child(5) {
+    background-image: linear-gradient(#002e21, #076E50);
+}
+.bdcircle-ul li:nth-child(6) {
+    margin-top: 0;
+    background-image: linear-gradient(#f00, #F56214);
+}
+.bdcircle-ul li:nth-child(7) {
+    background-image: url(/company/img/bdcircle03.png);
+}
+
+/* 반응형 모바일 스타일 */
+@media (max-width: 768px) {
+    .bdcircle-ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px; /* 동그라미 간 간격 */
+        min-width: 0; /* 화면 크기에 맞춰서 너비 자동 축소 */
+    }
+
+    /* 원 크기 비율로 조정 (부모 요소에 맞게 크기 변경) */
+    .bdcircle-bx {
+        width: 50vw; /* 화면 너비의 50%로 설정 */
+        height: 50vw; /* 화면 너비의 50%로 설정 */
+        background-size: cover;
+    }
+
+    /* 첫 번째와 마지막 원은 화면 밖으로 절반 잘리게 설정 */
+    .bdcircle-ul li:nth-child(1),
+    .bdcircle-ul li:nth-child(7) {
+        margin-left: -25%; /* 원을 왼쪽으로 절반 잘리게끔 설정 */
+    }
+
+    /* 중간 원은 그대로 중앙에 위치 */
+    .bdcircle-ul li:nth-child(4) {
+        margin-top: 0;
+    }
+
+    /* 왼쪽, 오른쪽 번갈아 가며 배치 */
+    .bdcircle-ul li:nth-child(odd) {
+        align-self: flex-start; /* 왼쪽 정렬 */
+    }
+
+    .bdcircle-ul li:nth-child(even) {
+        align-self: flex-end; /* 오른쪽 정렬 */
+    }
+}
+
+
+
+
+
+
 .ci-wrap{padding-top:120px;}
 
 .ci-txt-bx {
@@ -15,7 +109,7 @@
 
 .bdcircle-ul{display:flex; justify-content: space-between; margin-bottom:120px;}
 
-.bdcircle-bx{margin-top:200px; width: 250px; height: 250px; background:#eee; border-radius: 150px; background-size: 200px;}
+.bdcircle-bx{margin-top:200px; width: 250px; height: 250px; background:#eee; border-radius: 50%; background-size: 200px;}
 .bdcircle-ul li:nth-child(1){background-image: url(/company/img/bdcircle01.png); }
 .bdcircle-ul li:nth-child(2){margin-top:400px; background-image: url(/company/img/bdcircle02.png); }
 .bdcircle-ul li:nth-child(3){background-image: linear-gradient( #00091b, #002060);}
@@ -23,6 +117,10 @@
 .bdcircle-ul li:nth-child(5){background-image: linear-gradient(#002e21, #076E50);}
 .bdcircle-ul li:nth-child(6){margin-top:0;background-image: linear-gradient(#f00, #F56214);}
 .bdcircle-ul li:nth-child(7){background-image: url(/company/img/bdcircle03.png); }
+
+
+
+
 
 
 /*---별 작성---*/
@@ -147,4 +245,14 @@
     .main-ci-title, .main-ci-description {
         transition: none;
     }
+}
+.bdcircle-bx {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+.bdcircle-bx.visible { /* visible 클래스 추가 */
+    opacity: 1;
+    transform: scale(1); /* 기본 크기로 돌아가도록 설정 */
 }
