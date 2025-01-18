@@ -1,232 +1,246 @@
-                    @charset "utf-8";
-                    body,
-                    html {
-                        height: 100%;
-                        margin: 0;
-                    }
-                    /* 헤더 백그라운드 이미지 설정 */
-                    
-                    .intro-header-area {
-                        height: 100vh;
-                        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/car.png);
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                    }
-                    
-                    .intro-nav {
-                        margin-bottom: -80px;
-                    }
-                    
-                    .intro-nav a {
-                        color: #fff;
-                    }
-                    
-                    .intro-nav:hover a {
-                        color: #000;
-                    }
-                    
-                    .intro-header-inner-1 {
-                        font-size: clamp(40px, 8.667vw, 60px);
-                        color: #fff;
-                        font-weight: 900;
-                        letter-spacing: -1.5px;
-                        position: relative;
-                        top: 200px;
-                    }
-                    
-                    .intro-header-inner-2 {
-                        font-size: clamp(30px, 15.667vw, 380px);
-                        color: #fff;
-                        font-weight: 900;
-                        letter-spacing: -20px;
-                        line-height: 0.7;
-                        position: absolute;
-                        bottom: 0px;
-                        display: flex;
-                        justify-content: space-around;
-                        width: 100vw;
-                    }
-                    
-                    main {
-                        min-height: 100vh;
-                        /* 화면 높이를 최소한으로 채우도록 설정 */
-                        padding-bottom: 80px;
-                        /* footer 높이만큼 아래쪽 여백 추가 */
-                    }
-                    
-                    .cm-50 {
-                        margin-top: 110px;
-                    }
-                    
-                    .n-color {
-                        color: #002060;
-                    }
-                    
-                    .first-img {
-                        position: relative;
-                    }
-                    
-                    .first-img .first-txt {
-                        position: absolute;
-                        top: 10px;
-                        width: 100%;
-                        text-align: center;
-                        color: white;
-                        font-size: 100px
-                    }
-                    
-                    .custom-image {
-                        max-width: 100%;
-                        height: auto;
-                    }
-                    
-                    .text-container {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        height: 100%;
-                    }
-                    
-                    .text-container h1 {
-                        font-weight: bold;
-                    }
-                    
-                    .custom-image {
-                        border-radius: 30px;
-                    }
-                    
-                    .section3 {
-                        margin-top: 100px;
-                    }
-                    
-                    .section3-bg {
-                        height: 100vh;
-                        width: 100%;
-                        background: url(img/bg_with_dimmed.png) no-repeat center center;
-                        background-size: cover;
-                        margin-bottom: 70px;
-                        position: relative;
-                    }
-                    
-                    .section-font {
-                        position: absolute;
-                        right: 5%;
-                        bottom: 40%;
-                        font-size: clamp(8px, 4vw, 50px);
-                        text-align: right;
-                        color: white;
-                    }
-                    
-                    .vega-txt {
-                        text-align: left;
-                        max-width: 800px;
-                        padding: 20px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin: 50px 0;
-                    }
-                    
-                    .vega-txt p {
-                        font-size: 18px;
-                    }
-                    
-                    .vega-title {
-                        font-size: 68px;
-                        font-weight: bold;
-                        margin: 0;
-                        line-height: 1.2;
-                    }
-                    
-                    .vega-ptag {
-                        font-size: 15px;
-                        line-height: 1.6;
-                        margin-bottom: 0;
-                        color: #101010;
-                    }
-                    /* 카드 뉴스시작 */
-                    
-                    .card-img-top {
-                        position: relative;
-                        height: 300px;
-                        object-fit: cover;
-                    }
-                    
-                    .card-body {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        text-align: center;
-                    }
-                    
-                    .card-body h3 {
-                        color: white;
-                    }
-                    
-                    .card-title,
-                    .card-text {
-                        margin-bottom: 0.5rem;
-                        color: white;
-                    }
-                    
-                    .list-unstyled li,
-                    .card-text {
-                        color: white;
-                        font-weight: 400;
-                    }
-                    /* 카드 뉴스시작 끝 */
-                    
-                    .txtonly {
-                        padding-top: 120px;
-                        padding-bottom: 90px;
-                        padding-left: 80px;
-                        padding-right: 80px;
-                    }
-                    
-                    .txtonly p {
-                        text-align: center;
-                        font-size: 45px;
-                        font-weight: normal;
-                        line-height: 130%;
-                    }
-                    
-                    .client-logo {
-                        justify-content: space-between;
-                    }
-                    
-                    .client-logo .card {
-                        border: 0;
-                    }
-                    
-                    @media(max-width:768px) {
-                        .section3-bg h3 {
-                            font-size: 1.3rem;
-                        }
-                        .section-font {
-                            right: 0;
-                            left: 0;
-                            top: 50;
-                            transform: translateY(-50%);
-                            text-align: center;
-                            font-size: clamp(14px, 8vw, 35px);
-                        }
-                        .vega-title {
-                            font-size: 1.8rem;
-                        }
-                        .vega-ptag {
-                            font-size: 0.8rem;
-                        }
-                        .container.txtonly p {
-                            font-size: 25px;
-                        }
-                        .firstsectionfont1 {
-                            margin-top: 20px;
-                        }
-                        .firstsectionfont2 {
-                            margin-bottom: 20px;
-                        }
-                        .card-text {
-                            font-size: 15px;
-                        }
-                    }
+    @charset "utf-8";
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    /* 헤더 백그라운드 이미지 설정 */
+    
+    .intro-header-area {
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/car.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .intro-nav {
+        margin-bottom: -80px;
+    }
+    
+    .intro-nav a {
+        color: #fff;
+    }
+    
+    .intro-nav:hover a {
+        color: #000;
+    }
+    
+    .intro-header-inner-1 {
+        font-size: clamp(40px, 8.667vw, 60px);
+        color: #fff;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        position: relative;
+        top: 200px;
+    }
+    
+    .intro-header-inner-2 {
+        font-size: clamp(30px, 15.667vw, 380px);
+        color: #fff;
+        font-weight: 900;
+        letter-spacing: -20px;
+        line-height: 0.7;
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+    }
+    
+    main {
+        min-height: 100vh;
+        /* 화면 높이를 최소한으로 채우도록 설정 */
+        padding-bottom: 80px;
+        /* footer 높이만큼 아래쪽 여백 추가 */
+    }
+    
+    .cm-50 {
+        margin-top: 110px;
+    }
+    
+    .n-color {
+        color: #002060;
+    }
+    
+    .first-img {
+        position: relative;
+    }
+    
+    .first-img .first-txt {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 100px
+    }
+    
+    .custom-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .text-container h1 {
+        font-weight: bold;
+    }
+    
+    .custom-image {
+        border-radius: 30px;
+    }
+    
+    .section3 {
+        margin-top: 100px;
+    }
+    
+    .section3-bg {
+        height: 100vh;
+        width: 100%;
+        background: url(img/bg_with_dimmed.png) no-repeat center center;
+        background-size: cover;
+        margin-bottom: 70px;
+        position: relative;
+    }
+    
+    .section-font {
+        position: absolute;
+        right: 5%;
+        bottom: 40%;
+        font-size: clamp(8px, 4vw, 50px);
+        text-align: right;
+        color: white;
+    }
+    
+    .vega-txt {
+        text-align: left;
+        max-width: 800px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        flex-wrap: wrap;
+    }
+    
+    .vega-txt p {
+        font-size: 18px;
+    }
+    
+    .vega-title {
+        font-size: 68px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+    .vega-ptag {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        color: #101010;
+    }
+    /* 카드 뉴스시작 */
+    
+    .card-img-top {
+        position: relative;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .card-body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .card-body h3 {
+        color: white;
+    }
+    
+    .card-title,
+    .card-text {
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+    
+    .list-unstyled li,
+    .card-text {
+        color: white;
+        font-weight: 400;
+    }
+    /* 카드 뉴스시작 끝 */
+    
+    .txtonly {
+        padding-top: 120px;
+        padding-bottom: 90px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    .txtonly p {
+        text-align: center;
+        font-size: 45px;
+        font-weight: normal;
+        line-height: 130%;
+    }
+    
+    .client-logo {
+        justify-content: space-between;
+    }
+    
+    .client-logo .card {
+        border: 0;
+        margin: 0 auto;
+    }
+    
+    @media(max-width:768px) {
+        .section3-bg h3 {
+            font-size: 1.3rem;
+        }
+        .section-font {
+            right: 0;
+            left: 0;
+            top: 50;
+            transform: translateY(-50%);
+            text-align: center;
+            font-size: clamp(14px, 8vw, 35px);
+        }
+        .vega-title {
+            font-size: 1.8rem;
+        }
+        .vega-ptag {
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+        .container.txtonly p {
+            font-size: 25px;
+        }
+        .firstsectionfont1 {
+            margin-top: 20px;
+        }
+        .firstsectionfont2 {
+            margin-bottom: 20px;
+        }
+        .card-text {
+            font-size: 15px;
+        }
+        .st-mb {
+            margin-top: 100px;
+        }
+        .minicard {
+            width: 100px;
+        }
+        .minicard img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
