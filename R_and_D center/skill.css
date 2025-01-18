@@ -96,7 +96,7 @@
 }
 
 .smt-btn {
-  color:rgb(255, 255, 255);
+  color: grey
 }
 
 .sk-tx-weight {
@@ -145,4 +145,8 @@
 
 .sys-14 {
   font-size: 14px;
+}
+
+.check { 
+  border: 1px solid red;
 }
