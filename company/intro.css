@@ -423,10 +423,13 @@
   top: 20px;
   line-height: 30px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .intro-header-inner-2 {
     bottom: 0px;
     letter-spacing: -17px;
+  }
+  .main-area {
+    height: 5500px;
   }
   .main-item-1-2 {
     left: 33px;
