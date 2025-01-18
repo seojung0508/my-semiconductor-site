@@ -1,4 +1,3 @@
-
 /* header footer 공통 */
 async function loadHTML(id, file) {
     const response = await fetch(file);
@@ -45,7 +44,6 @@ $(function () {
 
 
 //메뉴 스크롤
-// 메뉴 스크롤
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
@@ -90,20 +88,4 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-
-
-/* 메뉴 하버 */
-$(document).ready(function() {
-    $('.nav-item').hover(
-        function() {
-            $('.navb-wrap').css('background', '#f0f0f0');
-        },
-        function() {
-            $('.navb-wrap').css('background', '');
-        }
-    );
-});
-
-
-
 
