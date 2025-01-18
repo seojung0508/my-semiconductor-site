@@ -1,6 +1,7 @@
 /* 모든 요소에 box-sizing을 border-box로 설정 */
 .loc-common {
     box-sizing: border-box;
+    color : 1C1E29;
 }
 
 .loc-common-scroll {
