@@ -1,4 +1,5 @@
 {
-    "liveServer.settings.port": 5501
-    
+    "liveServer.settings.port": 5501,
+    "cSpell.enabled": false
+    // 스펠링체크 해제 MERGE 시 스펠링 오류로 MERGE 불가.
 }

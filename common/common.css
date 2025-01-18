@@ -30,10 +30,11 @@ a { display: block; cursor: pointer; }
 
 .navb-ul{}
 /* .navb-ul .nav-item{position: relative;} */
-.nav-link{height:80px; line-height:64px;text-align: left;
+.nav-link{    display: block;
+    width: 100%; height:80px; line-height:64px;text-align: left;
     padding: var(--bs-nav-link-padding-y) 20px;display: flex;justify-content: space-between;}
-
-.nav-btn-more{border:none; background-color: transparent;}
+.nav-btn-bx{display: flex; justify-content: space-between;}
+.nav-btn-more{border:none; background-color: transparent;padding: 0 20px;}
 .nav-btn-more:after{content: ""; clear: both; display: block;
 width: 25px; height: 25px; background: url(./img/nav-btn-more.png) no-repeat;
 background-size: 25px;}
