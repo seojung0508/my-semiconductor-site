@@ -159,33 +159,12 @@
                         line-height: 130%;
                     }
                     
-                    .client-logo .data-list {
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        padding: 0;
-                        list-style: none;
-                        flex-wrap: wrap;
-                        /* 이 줄을 추가하여 작은 화면에서 요소들이 wrapping되도록 함 */
+                    .client-logo {
+                        justify-content: space-between;
                     }
                     
-                    .client-logo .data-list li {
-                        display: flex;
-                        /* inline-block을 제거하고 flex로 설정 */
-                        justify-content: center;
-                        /* 아이템이 가운데로 정렬되도록 */
-                        margin: 10px;
-                        /* 아이템 간의 간격을 추가 */
-                    }
-                    
-                    .client-logo .img-wrap {
-                        text-align: center;
-                    }
-                    
-                    .client-logo img {
-                        max-width: 100%;
-                        height: auto;
-                        /* 이미지 비율 유지 */
+                    .client-logo .card {
+                        border: 0;
                     }
                     
                     @media(max-width:768px) {
