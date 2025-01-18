@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="loc-common-scroll loc-common">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>베가텍</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="./loc.css" rel="stylesheet" type="text/css"/>
+    <link href="/common/common.css" rel="stylesheet" type="text/css"/>
+    <script defer src="/common/common.js"></script>
 </head>
-<body>
-    
+
+<body class="loc-common-scroll loc-common">
+    <!--https://ilcellion.co.kr/-->
+    <div id="header"></div>
+        <main class="main-loc-main cs10 max-1620 sub ci gutter-262">
+            <!--상단 글과 글귀-->
+            <div class="main-loc-header">
+                <div class="main-loc-text">오시는 길</div>
+                <p class="main-loc-text2">베가텍은 언제나 여러분께 열려 있습니다.</p>
+            </div>
+            <!-- 주소 & 전화번호 -->
+            <div class="main-loc-container">
+                <div class="main-loc-content row">
+                    <div class="col-sm-4">
+                        <dl class="main-loc-address">
+                            <dt>ADDRESS</dt>
+                            <dd class="py-3">서울특별시 중구 남대문로 81</dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-4">
+                        <dl class="main-loc-info row">
+                            <dt>INFORMATION
+                            <dd class="col-xl-6 py-3">TEL.061-272-7777</dd>
+                            <dd class="col-xl-6 py-3">FAX. 031-366-1130</dd>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+                 <!-- 지도 -->
+                    <div class="main-loc-map">
+                        <div class="main-loc-mapBox">
+                            <div class="address-box">
+                                <h3>롯데백화점 본점</h3>
+                                <p>서울특별시 중구 남대문로 81</p>
+                            </div>
+                        </div>
+                        <!-- 구글 지도 -->
+                        <div id="googleMap" style="width: 100%; height: 700px; position: relative;"></div>
+                    </div>
+            
+                    <script>
+                   function myMap() {
+                        // 지도 스타일 설정
+                        var styledMapType = new google.maps.StyledMapType(
+                            { name: "Custom Style" }
+                        );
+
+                        // 지도 설정
+                        var mapOptions = { 
+                            center: new google.maps.LatLng(37.564213, 126.981633), // 롯데백화점 본점 좌표
+                            zoom: 20, // 확대 수준
+                            mapTypeControl: false, // 지도 유형 선택 버튼 비활성화
+                            mapTypeId: google.maps.MapTypeId.ROADMAP // 기본 지도 유형
+                        };
+
+                        // 지도 생성
+                        var map = new google.maps.Map(
+                            document.getElementById("googleMap"), 
+                            mapOptions
+                        );
+
+                        // 스타일 적용
+                        map.mapTypes.set('styled_map', styledMapType);
+                        map.setMapTypeId('styled_map');
+
+                        // 귀여운 빨간 마커 아이콘
+                        var customIcon = {
+                            url: "https://cdn-icons-png.flaticon.com/512/252/252025.png", // 귀여운 빨간 핀 아이콘
+                            scaledSize: new google.maps.Size(40, 40), // 아이콘 크기
+                            anchor: new google.maps.Point(20, 40) // 지도에서의 위치 조정
+                        };
+
+                        var marker = new google.maps.Marker({
+                            position: { lat: 37.564213, lng: 126.981633 },
+                            map: map,
+                            icon: customIcon,
+                            title: "롯데백화점 본점"
+                        });
+                    }
+
+                    </script> 
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiRmCa4GJ5YRid3HuLoMdHIdxHV146OjI&callback=myMap"></script>
+            </div>
+        </div>
+    </main>
+<div id="footer"></div>
 </body>
 </html>

@@ -1,0 +1,145 @@
+
+/* 모든 요소에 box-sizing을 border-box로 설정 */
+.loc-common {
+    box-sizing: border-box;
+}
+
+.loc-common-scroll {
+    overflow-x: hidden; /* 수평 스크롤을 방지 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 스타일 */
+.main-loc-main {
+    padding: 120px 0px 200px;
+    max-width: 100%; /* 화면을 넘지 않도록 설정 */
+}
+
+.main-loc-text {
+    font-size: 64px;
+    word-break: keep-all;
+    font-weight: bold;
+    transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
+    will-change: font-size; /* 성능 최적화 */
+}
+
+.main-loc-text2 {
+    padding-top: 12px;
+    font-size: 24px;
+    word-break: keep-all;
+    font-weight: 400;
+    transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
+    will-change: font-size; /* 성능 최적화 */
+}
+
+/* 화면 크기 변화 시 반응형 스타일 */
+.main-loc-container {
+    padding-top: 80px;
+    max-width: 100%; /* 화면을 넘지 않도록 설정 */
+}
+
+/* 화면 크기가 960px 이하일 때 padding을 30px로 설정 */
+@media (max-width: 960px) {
+    .main-loc-container {
+        padding-top: 30px;
+    }
+
+    .main-loc-text {
+        font-size: 24px;
+    }
+
+    .main-loc-text2 {
+        font-size: 13px;
+    }
+}
+
+/* 새로고침 시 transition 비활성화 */
+@media (prefers-reduced-motion: reduce) {
+    .main-loc-text, .main-loc-text2 {
+        transition: none;
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1280px) {
+    :root {
+        --gutter-100: 4.208vw;
+        --gutter-120: 5.250vw;
+        --gutter-180: 8.075vw;
+        --gutter-262: 12.146vw;
+        --gutter-160-120: 160px 4.250vw;
+        --gutter-160-210: 160px 8.938vw;
+        --gutter-200-120: 210px 4.250vw;
+    }
+}
+
+:root {
+    --vh100: calc(var(--vh, 1vh)* 100);
+    --xsmall: 20px;
+    --small: 40px;
+    --medium: 48px;
+    --large: 56px;
+    --xlarge: 70px;
+    --xlarge-: -70px;
+    --ico-m: 20px;
+    --ico-l: 25px;
+    --scroll: 4px;
+    --header: 96px;
+    --header-: -96px;
+}
+
+@media (max-width: 1619px) {
+    .main-loc-header {
+        padding-bottom: 80px;
+        padding-left: 5vw;
+    }
+}
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+@media (max-width: 1619px) {
+    .main-loc-content {
+        padding-left: 5vw;
+    }
+}
+
+.main-loc-container {
+    max-width: 100%; /* 부모 컨테이너가 화면을 넘지 않도록 설정 */
+}
+.main-loc-map {
+    position: relative;
+}
+
+.address-box {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* 오른쪽 위로 조정하려면 `right: 20px; left` 삭제 */
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 250px;
+}
+
+.address-box h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+.address-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
