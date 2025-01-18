@@ -1,4 +1,3 @@
-
 /* header footer 공통 */
 async function loadHTML(id, file) {
     const response = await fetch(file);
@@ -44,4 +43,49 @@ $(function () {
 });
 
 
+//메뉴 스크롤
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('.navb-wrap').outerHeight();
+var scrollCount = 4; // 스크롤 내린 횟수 추적 변수
+
+$(window).scroll(function () {
+    didScroll = true;
+});
+
+setInterval(function () {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(window).scrollTop();
+
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+
+    // 스크롤이 아래로 내려갔을 때
+    if (st > lastScrollTop) {
+        scrollCount++;
+        if (scrollCount >= 2) {
+            $('.navb-wrap').removeClass('nav-down').addClass('nav-up');
+        }
+    }
+    // 스크롤이 위로 올라갔을 때
+    else {
+        if (st + $(window).height() < $(document).height()) {
+            $('.navb-wrap').removeClass('nav-up').addClass('nav-down ');
+            scrollCount = 0;
+        }
+    }
+
+    // 스크롤이 상단에 도달하면 클래스 초기화
+    if (st === 0) {
+        $('.navb-wrap').removeClass('nav-down nav-up');
+    }
+
+    lastScrollTop = st;
+}
 
