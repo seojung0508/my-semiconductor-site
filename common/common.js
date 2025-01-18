@@ -48,7 +48,7 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('.navb-wrap').outerHeight();
-var scrollCount = 0; // 스크롤 내린 횟수 추적 변수
+var scrollCount = 4; // 스크롤 내린 횟수 추적 변수
 
 $(window).scroll(function () {
     didScroll = true;
@@ -69,7 +69,7 @@ function hasScrolled() {
     // 스크롤이 아래로 내려갔을 때
     if (st > lastScrollTop) {
         scrollCount++;
-        if (scrollCount >= 1) {
+        if (scrollCount >= 2) {
             $('.navb-wrap').removeClass('nav-down').addClass('nav-up');
         }
     }
