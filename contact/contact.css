@@ -10,6 +10,8 @@
 .ct-info{margin-top:50px;}
 .ct-info .ct-stit{font-size:20px;font-weight: 600;}
 
+.ct-input .input-txt:focus ,.ct-textarea .textarea-txt:focus{outline:1px solid #076E50;}
+
 .ct-input{margin-top:20px;}
 .ct-input .input-txt{width: 100%;border: none;border-bottom: 1px solid #ddd; height: 49px;padding: 0 10px;margin-top: 10px;}
 .ct-input .input-txt::placeholder{font-size:14px; font-weight: bold; color:#aaa;}
@@ -30,11 +32,26 @@
 .ct-textarea .textarea-txt{width: 100%;height: 250px;padding:20px; border:1px solid #ddd;}
 
 .ct-agree-bx{display: flex;margin-top: 30px;}
+.ct-agree-bx .ct-checkbx[type="checkbox"] {accent-color: #076E50;}
 .ct-privacy{color:#000;font-weight:bold;margin-left:10px;}
 
 .ct-btn-bx{margin: 0 auto;display: flex;justify-content: center;margin-top: 40px;}
 .ct-btn-bx .ct-btn{border: 1px solid #333;border-radius: 2px;padding: 10px 30px;font-size: 14px;background: #fff;font-weight: bold;}
 .ct-btn-bx .ct-btn:hover{background:#002060; color:#fff; border-color:#002060;}
+
+/* privacy */
+.pr-h4{font-size:35px; font-weight: bold;}
+
+.pr-txt-bx{ margin-top:30px;}
+.pr-txt-bx p{font-size: 17px; margin-top:4px; margin-bottom: 0;}
+.pr-txt-bx .pr-tit{font-size: 20px; font-weight: bold; margin-bottom:20px;}
+
+.pr-txt{margin-top: 20px;}
+.pr-txt p{padding-left:25px; position: relative;}
+.pr-txt .bullet{position: absolute; top:0; left:0;}
+.pr-txt .pr-sli{margin-left:20px;}
+.pr-txt .pr-sli .spot{position: relative;}
+.pr-txt .pr-sli .spot:after {content: "";clear: both;display: block;width: 5px;height: 5px;background: #333;border-radius: 20px;position: absolute;top: 9px;left: -14px;}
 
 @media (min-width:576px){
     .ct-fd2 .ct-field{width:inherit; margin-right:20px;}
