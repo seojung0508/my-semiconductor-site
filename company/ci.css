@@ -93,6 +93,7 @@
     padding: 0;
 }
 .main-ci-Text {
+    padding-top : 50px;
     font-size: 64px;
     word-break: keep-all;
     font-weight: bold;
