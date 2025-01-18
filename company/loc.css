@@ -113,3 +113,33 @@ dl {
 .main-loc-container {
     max-width: 100%; /* 부모 컨테이너가 화면을 넘지 않도록 설정 */
 }
+.main-loc-map {
+    position: relative;
+}
+
+.address-box {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* 오른쪽 위로 조정하려면 `right: 20px; left` 삭제 */
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 250px;
+}
+
+.address-box h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+.address-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
