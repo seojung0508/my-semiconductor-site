@@ -33,7 +33,7 @@
     will-change: font-size; /* 성능 최적화 */
 }
 .main-loc-address{
-    width : 200px;
+    width :200px;
 }
 /* 화면 크기 변화 시 반응형 스타일 */
 .main-loc-container {

@@ -1,153 +1,102 @@
-/* 기본 스타일 (데스크탑 및 태블릿) */
-.bdcircle-ul {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 120px;
-    overflow: hidden;
-    min-width: 1000px; /* 최소 너비를 설정하여 화면 축소 방지 */
-}
-
-.bdcircle-bx {
-    width: 250px; /* 기본 크기 */
-    height: 250px; /* 기본 크기 */
-    background: #eee;
-    border-radius: 50%;
-    background-size: cover;
-}
-
-.bdcircle-ul li {
-    flex: 0 0 auto; /* 고정된 크기를 갖지 않도록 설정 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 각 원에 대한 배경 이미지 설정 */
-.bdcircle-ul li:nth-child(1) {
-    background-image: url(/company/img/bdcircle01.png);
-}
-.bdcircle-ul li:nth-child(2) {
-    margin-top: 400px;
-    background-image: url(/company/img/bdcircle02.png);
-}
-.bdcircle-ul li:nth-child(3) {
-    background-image: linear-gradient(#00091b, #002060);
-}
-.bdcircle-ul li:nth-child(4) img {
-    width: 71%;
-    position: relative;
-    top: 43%;
-    left: 15%;
-}
-.bdcircle-ul li:nth-child(5) {
-    background-image: linear-gradient(#002e21, #076E50);
-}
-.bdcircle-ul li:nth-child(6) {
-    margin-top: 0;
-    background-image: linear-gradient(#f00, #F56214);
-}
-.bdcircle-ul li:nth-child(7) {
-    background-image: url(/company/img/bdcircle03.png);
-}
-
-/* 반응형 모바일 스타일 */
-@media (max-width: 768px) {
-    .bdcircle-ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px; /* 동그라미 간 간격 */
-        min-width: 0; /* 화면 크기에 맞춰서 너비 자동 축소 */
-    }
-
-    /* 원 크기 비율로 조정 (부모 요소에 맞게 크기 변경) */
-    .bdcircle-bx {
-        width: 50vw; /* 화면 너비의 50%로 설정 */
-        height: 50vw; /* 화면 너비의 50%로 설정 */
-        background-size: cover;
-    }
-
-    /* 첫 번째와 마지막 원은 화면 밖으로 절반 잘리게 설정 */
-    .bdcircle-ul li:nth-child(1),
-    .bdcircle-ul li:nth-child(7) {
-        margin-left: -25%; /* 원을 왼쪽으로 절반 잘리게끔 설정 */
-    }
-
-    /* 중간 원은 그대로 중앙에 위치 */
-    .bdcircle-ul li:nth-child(4) {
-        margin-top: 0;
-    }
-
-    /* 왼쪽, 오른쪽 번갈아 가며 배치 */
-    .bdcircle-ul li:nth-child(odd) {
-        align-self: flex-start; /* 왼쪽 정렬 */
-    }
-
-    .bdcircle-ul li:nth-child(even) {
-        align-self: flex-end; /* 오른쪽 정렬 */
-    }
-}
-
-
-
-
-
-
 .ci-wrap{padding-top:120px;}
 
-.ci-txt-bx {
-    font-size: 18px;
-    padding: 100px 131px 50px 55px;
-    font-weight: 400;
-    transition: padding 0.3s ease; /* padding에 대한 부드러운 전환 추가 */
-}
+.ci-txt-bx{}
 .ci-txt-bx p{text-align: center;}
 
 .brand-color-bx{display: flex; justify-content: space-between;}
 
-.main-ci-image{width: 100%;height: 500px;margin: 0;overflow:hidden;position: relative; background-color: #ddd;}
+.main-ci-image{width: 100%;height: 200px;margin: 0;overflow:hidden;position: relative; background-color: #ddd;}
 .main-ci-image img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;width: 100%;height: auto;}
 
-.bdcircle-ul{display:flex; justify-content: space-between; margin-bottom:120px;}
+.bdcircle-ul{flex-wrap: wrap; display:flex; justify-content: space-between; margin-bottom:120px;}
 
-.bdcircle-bx{margin-top:200px; width: 250px; height: 250px; background:#eee; border-radius: 50%; background-size: 200px;}
-.bdcircle-ul li:nth-child(1){background-image: url(/company/img/bdcircle01.png); }
-.bdcircle-ul li:nth-child(2){margin-top:400px; background-image: url(/company/img/bdcircle02.png); }
+.bdcircle-bx{width: 250px; height: 250px; background:#eee; border-radius: 250px; background-size: 200px;}
+.bdcircle-ul li:nth-child(1){background-image: url(ci-img/bdcircle01.png); }
+.bdcircle-ul li:nth-child(2){background-image: url(ci-img/bdcircle02.png); }
 .bdcircle-ul li:nth-child(3){background-image: linear-gradient( #00091b, #002060);}
 .bdcircle-ul li:nth-child(4) img {width: 71%;position: relative;top: 43%;  left: 15%;}
 .bdcircle-ul li:nth-child(5){background-image: linear-gradient(#002e21, #076E50);}
-.bdcircle-ul li:nth-child(6){margin-top:0;background-image: linear-gradient(#f00, #F56214);}
-.bdcircle-ul li:nth-child(7){background-image: url(/company/img/bdcircle03.png); }
+.bdcircle-ul li:nth-child(6){background-image: linear-gradient(#f00, #F56214);}
+.bdcircle-ul li:nth-child(7){background-image: url(ci-img/bdcircle03.png); }
 
+@media (max-width: 768px) {
+    .bdcircle-ul {flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        min-width: 0; 
+    }
+    .bdcircle-bx {
+        width: 50vw;
+        height: 50vw;
+        background-size: cover;
+    }
+    .bdcircle-ul li:nth-child(1),
+    .bdcircle-ul li:nth-child(7) {
+        margin-left: -25%;
+    }
+    .bdcircle-ul li:nth-child(4) {
+        margin-top: 0;
+    }
+    .bdcircle-ul li:nth-child(odd) {
+        align-self: flex-start;
+    }
+    .bdcircle-ul li:nth-child(even) {
+        align-self: flex-end;
+    }
+}
 
-
-
-
-
+@media (min-width:768px){
+    .main-ci-image{height:460px;}
+    .bdcircle-ul{justify-content:end;}
+    .bdcircle-bx{margin-top:0px;}
+    .ci-txt-bx{padding: 20px 15px 10px 22px;}
+    .main-ci-container2{padding-top : 0px;}
+    .bdcircle-ul li:nth-child(1){}
+    .bdcircle-ul li:nth-child(2){margin-top:200px;}
+    .bdcircle-ul li:nth-child(3){}
+    .bdcircle-ul li:nth-child(5){margin-top:200px;}
+    .bdcircle-ul li:nth-child(6){}
+    .bdcircle-ul li:nth-child(7){}
+}
+@media (min-width: 1024px) {
+    .bdcircle-bx{margin-top:200px;}
+    .ci-txt-bx{padding: 50px 10px;}
+    .main-ci-container2{padding-top : 0px;}
+    .bdcircle-ul li:nth-child(1){}
+    .bdcircle-ul li:nth-child(2){margin-top:400px;}
+    .bdcircle-ul li:nth-child(3){}
+    .bdcircle-ul li:nth-child(4){margin-top:400px;}
+    .bdcircle-ul li:nth-child(5){}
+    .bdcircle-ul li:nth-child(6){margin-top:0;}
+    .bdcircle-ul li:nth-child(7){}
+}
+@media (min-width: 1250px) {
+    .bdcircle-ul{justify-content: space-between;}
+    .bdcircle-bx{margin-top:200px;}
+    .bdcircle-ul li:nth-child(1){}
+    .bdcircle-ul li:nth-child(2){margin-top:400px;}
+    .bdcircle-ul li:nth-child(3){}
+    .bdcircle-ul li:nth-child(4){margin-top:400px;}
+    .bdcircle-ul li:nth-child(5){}
+    .bdcircle-ul li:nth-child(6){margin-top:0;}
+    .bdcircle-ul li:nth-child(7){margin-top:0;}
+}
 /*---별 작성---*/
-/*---글자 디테일 잡기---*/
 .ci-common {
     box-sizing: border-box;
     color : 1C1E29;
 }
-
 .ci-common-scroll {
-    overflow-x: hidden; /* 수평 스크롤을 방지 */
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-
-/* 기본 스타일 */
-.main-ci-main {
-    padding: 120px 0px 200px;
-    max-width: 100%; /* 화면을 넘지 않도록 설정 */
-}
-
 .main-ci-Text {
     font-size: 64px;
     word-break: keep-all;
     font-weight: bold;
-    transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
-    will-change: font-size; /* 성능 최적화 */
+    transition: font-size 0.6s ease;
+    will-change: font-size;
 }
 
 .main-ci-text2 {
@@ -155,19 +104,14 @@
     font-size: 24px;
     word-break: keep-all;
     font-weight: 400;
-    transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
-    will-change: font-size; /* 성능 최적화 */
+    transition: font-size 0.6s ease;
+    will-change: font-size;
 }
 
-/* 화면 크기 변화 시 반응형 스타일 */
 .main-ci-container {
     padding-top: 80px;
-    max-width: 100%; /* 화면을 넘지 않도록 설정 */
+    max-width: 100%;
 }
-.main-ci-container2{
-    padding-top : 160px;
-}
-/* 화면 크기가 960px 이하일 때 padding을 30px로 설정 */
 @media (max-width: 960px) {
     .main-ci-container {
         padding-top: 30px;
@@ -182,11 +126,9 @@
     }
     .ci-txt-bx{
         font-size: 16px;
-        padding: 100px 15px 10px 22px;
     }
 }
 
-/* 새로고침 시 transition 비활성화 */
 @media (prefers-reduced-motion: reduce) {
     .main-ci-Text, .main-ci-text2 {
         transition: none;
@@ -201,9 +143,9 @@
 }
 .main-ci-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 두 개의 칸으로 나눔 */
-    gap: 20px; /* 칸 사이 간격 */
-    align-items: center; /* 수직 가운데 정렬 */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
     padding : 160px 227px;
     }
 
@@ -212,7 +154,7 @@
     padding-bottom : 20px;
     font-weight: bold;
     word-break: keep-all;
-    transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
+    transition: font-size 0.6s ease;
 }
 
 .main-ci-description {
@@ -220,13 +162,12 @@
     font-weight: 400;
     word-break: keep-all;
     line-height: 1.6;
-    transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
+    transition: font-size 0.6s ease;
 }
 
-/* 화면 크기가 960px 이하일 때 반응형 스타일 */
 @media (max-width: 960px) {
     .main-ci-grid {
-        grid-template-columns: 1fr; /* 한 열로 변경 */
+        grid-template-columns: 1fr;
         gap: 10px;
         padding: 80px 15px;
     }
@@ -240,19 +181,8 @@
     }
 }
 
-/* 새로고침 시 transition 비활성화 */
 @media (prefers-reduced-motion: reduce) {
     .main-ci-title, .main-ci-description {
         transition: none;
     }
-}
-.bdcircle-bx {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 0.2s ease-in-out;
-}
-
-.bdcircle-bx.visible { /* visible 클래스 추가 */
-    opacity: 1;
-    transform: scale(1); /* 기본 크기로 돌아가도록 설정 */
 }
