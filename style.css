@@ -13,17 +13,17 @@
         background-repeat: no-repeat;
     }
     
-    .intro-nav {
+    /* .intro-nav {
         margin-bottom: -80px;
-    }
+    } */
     
-    .intro-nav a {
+    /* .intro-nav a {
         color: #fff;
     }
     
     .intro-nav:hover a {
         color: #000;
-    }
+    } */
     
     .intro-header-inner-1 {
         font-size: clamp(40px, 8.667vw, 60px);
@@ -34,6 +34,8 @@
         top: 200px;
     }
     
+    .main-header-inner.intro-header-inner-2{
+        font-size: clamp(30px, 14.667vw, 380px); width: 100%; letter-spacing:-7px;}
     .intro-header-inner-2 {
         font-size: clamp(30px, 15.667vw, 380px);
         color: #fff;
@@ -176,6 +178,7 @@
         color: white;
         font-weight: 400;
     }
+
     /* 카드 뉴스시작 끝 */
     
     .txtonly {
@@ -199,8 +202,10 @@
     .client-logo .card {
         border: 0;
         margin: 0 auto;
+        align-items: center;
     }
-    
+
+    .minicard img{width:80%;}
     @media(max-width:768px) {
         .section3-bg h3 {
             font-size: 1.3rem;
