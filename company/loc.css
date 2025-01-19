@@ -17,7 +17,7 @@
 }
 
 .main-loc-text {
-    font-size: 64px;
+    font-size: 48px;
     word-break: keep-all;
     font-weight: bold;
     transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
@@ -25,8 +25,8 @@
 }
 
 .main-loc-text2 {
-    padding-top: 12px;
-    font-size: 24px;
+    /* padding-top: 12px; */
+    /* font-size: 20px; */
     word-break: keep-all;
     font-weight: 400;
     transition: font-size 0.6s ease; /* 부드러운 크기 변화 */
@@ -47,13 +47,13 @@
         padding-top: 30px;
     }
 
-    .main-loc-text {
+    /* .main-loc-text {
         font-size: 24px;
     }
 
     .main-loc-text2 {
         font-size: 13px;
-    }
+    } */
 }
 
 /* 새로고침 시 transition 비활성화 */
