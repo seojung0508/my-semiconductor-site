@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베가텍</title>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="/common/common.css" rel="stylesheet" type="text/css"/>
+    <script defer src="/common/common.js"></script>
+    <link href="./loc.css" rel="stylesheet" type="text/css"/>
+    <style>
+        @media (min-width: 992px) {
+           .navb-ul li:nth-child(1) .nav-link{color:#076E50;}
+        }
+   </style>
+
+</head>
+
+<body>
+    <!--https://ilcellion.co.kr/-->
+    <div id="header"></div>
+        <main class="main-loc-main cs10 max-1620 sub ci gutter-262 container">
+            <!--상단 글과 글귀-->
+            <div class="main-loc-header">
+                <div class="main-loc-text">오시는 길</div>
+                <p class="main-loc-text2">베가텍은 언제나 여러분께 열려 있습니다.</p>
+            </div>
+            <!-- 주소 & 전화번호 -->
+            <div class="main-loc-container">
+                <div class="main-loc-content row">
+                    <div class="col-sm-6">
+                        <dl class="main-loc-address">
+                            <dt>ADDRESS</dt>
+                            <dd>서울특별시 중구 남대문로 81</dd>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6">
+                        <dl class="main-loc-info row">
+                            <dt>INFORMATION
+                            <dd class="col-xl-6">TEL.061-272-7777</dd>
+                            <dd class="col-xl-6">FAX. 031-366-1130</dd>
+                        </dt>
+                    </dl>
+                </div>
+            </div>
+            <!-- 지도 -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.892728566843!2d127.06071277558964!3d37.2265213721286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b4791e90f4eb3%3A0xe9d46a6c232b3dba!2z7IWA66as7Jio!5e0!3m2!1sko!2skr!4v1737209594422!5m2!1sko!2skr" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            
+                </div>
+            </main>
+            <div id="footer"></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiRmCa4GJ5YRid3HuLoMdHIdxHV146OjI&callback=myMap" async defer></script>
+        <script>
+        function myMap() {
+            // 지도 설정
+            var mapOptions = { 
+                center: new google.maps.LatLng(37.564213, 126.981633), // 롯데백화점 본점 좌표
+                zoom: 20, // 확대 수준
+                mapTypeControl: false, // 지도 유형 선택 버튼 비활성화
+                mapTypeId: google.maps.MapTypeId.ROADMAP // 기본 지도 유형
+            };
+
+            // 지도 생성
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"), 
+                mapOptions
+            );
+
+            // 기본 마커 설정
+            var marker = new google.maps.Marker({
+                position: { lat: 37.564213, lng: 126.981633 },
+                map: map,
+                title: "Marker"
+            });
+            }
+        </script> 
+    </body>
+</html>
