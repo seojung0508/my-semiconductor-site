@@ -1,3 +1,5 @@
+.sk-btn-active{background:#002060; color:#fff;}
+
 .skill-main-padding {
   padding-top: 120px;
   padding-bottom: 200px;  
@@ -96,14 +98,19 @@
 }
 
 .smt-btn {
-  color: grey
+  color: #002060;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
 }
-
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size:30px;
+}
 .sk-tx-weight {
   font-weight: 600;
   font-size: 48px;
 }
-
 .sk-tx {
   font-weight: 600;
   font-size: 30px;
