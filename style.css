@@ -44,7 +44,7 @@
         bottom: 0px;
         display: flex;
         justify-content: space-around;
-        width: 100vw;
+        width: 100%;
     }
     
     main {
@@ -147,6 +147,16 @@
     }
     /* 카드 뉴스시작 */
     
+    .minicard {
+        width: 140px;
+    }
+    
+    .minicard img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
     .card-img-top {
         position: relative;
         height: 300px;
@@ -242,5 +252,8 @@
             width: 100%;
             height: auto;
             object-fit: contain;
+        }
+        .intro-header-inner-2 {
+            letter-spacing: -10px;
         }
     }
